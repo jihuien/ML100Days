@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" version="26.0.15">
   <diagram name="第 1 页" id="Nd0luwe751ldXixgn1Fn">
-    <mxGraphModel dx="4785" dy="2370" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="5297" dy="2651" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -90,6 +90,20 @@
         </mxCell>
         <mxCell id="yzDa2cLeqAPFEKQedceI-35" value="&lt;font style=&quot;font-size: 48px;&quot;&gt;PE&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
           <mxGeometry x="275" y="362" width="180" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="yzDa2cLeqAPFEKQedceI-36" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0.999;entryY=0.29;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;strokeWidth=10;" edge="1" target="yzDa2cLeqAPFEKQedceI-37" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1598" y="293" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yzDa2cLeqAPFEKQedceI-37" value="" style="rounded=0;whiteSpace=wrap;html=1;direction=west;horizontal=1;fontSize=47;labelBackgroundColor=light-dark(#dae8fc, #ededed);fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1749" y="-325" width="307" height="869" as="geometry" />
+        </mxCell>
+        <mxCell id="yzDa2cLeqAPFEKQedceI-39" value="&lt;font style=&quot;font-size: 37px;&quot;&gt;Un-nomed Softmax Unit&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1786" y="-225" width="237" height="237" as="geometry" />
+        </mxCell>
+        <mxCell id="yzDa2cLeqAPFEKQedceI-40" value="&lt;font style=&quot;font-size: 37px;&quot;&gt;Non-linearization Unit&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1786" y="148" width="237" height="237" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
