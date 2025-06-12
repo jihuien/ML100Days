@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.1.1">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="27.1.4">
   <diagram name="第 1 页" id="PxNDg2cY9GIgu7gtpZ4i">
-    <mxGraphModel dx="1426" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1397" dy="297" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -14,7 +14,7 @@
           <mxGeometry x="14" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="7mek623oFP9vRKAEX3To-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="100" y="170" width="140" height="560" as="geometry" />
+          <mxGeometry x="-290" y="170" width="530" height="560" as="geometry" />
         </mxCell>
         <mxCell id="7mek623oFP9vRKAEX3To-9" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -257,6 +257,33 @@
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="90" y="24" as="sourcePoint" />
             <mxPoint y="25" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JOhl46XAyu-Ho14lBobh-1" value="in.dat" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="-240" y="210" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JOhl46XAyu-Ho14lBobh-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-260" y="310" width="460" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="JOhl46XAyu-Ho14lBobh-3" value="Sequencer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-220" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JOhl46XAyu-Ho14lBobh-4" value="Driver" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-220" y="470" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JOhl46XAyu-Ho14lBobh-7" value="Driver" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-220" y="555" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JOhl46XAyu-Ho14lBobh-8" value="Moniter" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JOhl46XAyu-Ho14lBobh-9" value="Driver" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JOhl46XAyu-Ho14lBobh-10" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;width=8.571428571428571;endSize=11.642857142857144;exitX=1;exitY=0.908;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="7mek623oFP9vRKAEX3To-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="640" as="sourcePoint" />
+            <mxPoint x="30" y="720" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
