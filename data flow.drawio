@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.3.4">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.3.4">
   <diagram id="PE_Block_Diagram" name="PE_Module">
-    <mxGraphModel dx="1695" dy="473" grid="1" gridSize="1" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1629" dy="421" grid="1" gridSize="1" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -109,7 +109,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="NXzMV5L9A22cJpQCwDso-68" parent="1" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;strokeColor=default;strokeWidth=1;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;gradientColor=none;aspect=fixed;" value="" vertex="1">
-          <mxGeometry height="99" width="46.2" x="-158" y="499.5" as="geometry" />
+          <mxGeometry height="113.57" width="53" x="-158" y="499.5" as="geometry" />
         </mxCell>
         <mxCell id="NXzMV5L9A22cJpQCwDso-74" edge="1" parent="1" source="NXzMV5L9A22cJpQCwDso-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" target="NXzMV5L9A22cJpQCwDso-71">
           <mxGeometry relative="1" as="geometry" />
@@ -130,6 +130,17 @@
         </mxCell>
         <mxCell id="NXzMV5L9A22cJpQCwDso-72" parent="1" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;strokeColor=default;strokeWidth=1;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;gradientColor=none;aspect=fixed;" value="" vertex="1">
           <mxGeometry height="99" width="46.2" x="171" y="499.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GpJZEXn95i3bRymD32dh-2" edge="1" parent="1" source="GpJZEXn95i3bRymD32dh-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=-5;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="NXzMV5L9A22cJpQCwDso-68">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-179" y="554" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GpJZEXn95i3bRymD32dh-1" parent="1" style="shadow=0;dashed=0;align=center;html=1;strokeWidth=1;shape=mxgraph.electrical.abstract.mux2;whiteSpace=wrap;aspect=fixed;" value="Mux" vertex="1">
+          <mxGeometry height="92" width="61.33" x="-265" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="GpJZEXn95i3bRymD32dh-4" parent="1" style="text;whiteSpace=wrap;" value="Wgt_reg" vertex="1">
+          <mxGeometry height="28" width="65" x="-155" y="542.29" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
