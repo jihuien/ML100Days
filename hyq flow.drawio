@@ -1,0 +1,80 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.3.7">
+  <diagram name="第 1 页" id="O_2jZf1Pyd9AM-vIg9lN">
+    <mxGraphModel dx="1285" dy="691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="10" parent="1" style="swimlane;rounded=1;whiteSpace=wrap;html=1;horizontal=1;startSize=30;fillColor=#FFFFFF;" value="Offline / Calibration Stage" vertex="1">
+          <mxGeometry height="260" width="980" x="20" y="20" as="geometry">
+            <mxRectangle height="30" width="180" x="20" y="20" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" parent="10" style="rounded=1;whiteSpace=wrap;html=1;" value="Load pretrained&#xa;FP32 model" vertex="1">
+          <mxGeometry height="60" width="150" x="30" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="10" style="rounded=1;whiteSpace=wrap;html=1;" value="Fold BatchNorm&#xa;into Conv" vertex="1">
+          <mxGeometry height="60" width="150" x="210" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="10" style="rounded=1;whiteSpace=wrap;html=1;" value="Insert uniform quantizers&#xa;(scale s, zero-point z)" vertex="1">
+          <mxGeometry height="60" width="190" x="390" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="10" style="rounded=1;whiteSpace=wrap;html=1;" value="QADS optimize per-channel α&#xa;min MSE: Q(X/α)·Q(αW) vs FP output" vertex="1">
+          <mxGeometry height="80" width="300" x="610" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="10" style="rounded=1;whiteSpace=wrap;html=1;" value="Merge α into quantizer / weights&lt;br&gt;s* = α·s, Wc = W/α (offline)" vertex="1">
+          <mxGeometry height="60" width="250" x="635" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="16" parent="10" style="rounded=1;whiteSpace=wrap;html=1;" value="Calibrate observers&#xa;collect stats / finalize ranges" vertex="1">
+          <mxGeometry height="60" width="220" x="30" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="101" edge="1" parent="10" source="11" style="endArrow=block;html=1;rounded=0;" target="12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="102" edge="1" parent="10" source="12" style="endArrow=block;html=1;rounded=0;" target="13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="103" edge="1" parent="10" source="13" style="endArrow=block;html=1;rounded=0;" target="14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="104" edge="1" parent="10" source="14" style="endArrow=block;html=1;rounded=0;" target="15" value="α found">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="105" edge="1" parent="10" source="15" style="endArrow=block;html=1;rounded=0;" target="16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="20" parent="1" style="swimlane;rounded=1;whiteSpace=wrap;html=1;horizontal=1;startSize=30;" value="Inference Stage (Integer-only goal)" vertex="1">
+          <mxGeometry height="220" width="990" x="30" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="21" parent="20" style="rounded=1;whiteSpace=wrap;html=1;" value="Enable quant mode&#xa;(INT8 inference graph)" vertex="1">
+          <mxGeometry height="60" width="190" x="30" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="22" parent="20" style="rounded=1;whiteSpace=wrap;html=1;" value="INT8 Conv / MatMul / FC / LN&#xa;(+ shortcut quant if needed)" vertex="1">
+          <mxGeometry height="60" width="260" x="250" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="23" parent="20" style="rounded=1;whiteSpace=wrap;html=1;" value="Attention Softmax: LinMax&#xa;integer-only linear exp&#xa;(add + shift; avoid INT32 mul)" vertex="1">
+          <mxGeometry height="80" width="280" x="540" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="24" parent="20" style="rounded=1;whiteSpace=wrap;html=1;" value="Output / Validate / Export" vertex="1">
+          <mxGeometry height="60" width="140" x="840" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="201" edge="1" parent="20" source="21" style="endArrow=block;html=1;rounded=0;" target="22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="202" edge="1" parent="20" source="22" style="endArrow=block;html=1;rounded=0;" target="23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="203" edge="1" parent="20" source="23" style="endArrow=block;html=1;rounded=0;" target="24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="106" edge="1" parent="1" source="16" style="endArrow=block;html=1;rounded=0;" target="21" value="final scales">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="280" as="sourcePoint" />
+            <mxPoint x="120" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
