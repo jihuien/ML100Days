@@ -1,0 +1,126 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.6.1">
+  <diagram name="第 1 页" id="m6uLO8UIshlRRwHvD2hL">
+    <mxGraphModel dx="1869" dy="1005" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=26;fontStyle=1" value="HyCTor 論文架構流程圖" vertex="1">
+          <mxGeometry height="40" width="500" x="650" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1" value="單核心 HyCTor Core" vertex="1">
+          <mxGeometry height="30" width="280" x="80" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dram" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16" value="Off-chip DRAM&#xa;• Activations&#xa;• Weights&#xa;• Sparse masks" vertex="1">
+          <mxGeometry height="120" width="180" x="80" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="inbuf" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15" value="Input Buffer&#xa;• 從 DRAM 載入 activations / weights&#xa;• 送往 PE Array" vertex="1">
+          <mxGeometry height="120" width="240" x="320" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="sparsity" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=15" value="Sparsity Unit&#xa;• 讀取 sparse masks&#xa;• 產生 row / column indices&#xa;• restore zeros&#xa;• 更新 sparsity" vertex="1">
+          <mxGeometry height="150" width="240" x="320" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="pearay" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=15" value="OS / WS Fused Parallel PE Array&#xa;• 支援 Output-Stationary / Weight-Stationary&#xa;• 多個 PE rows 平行&#xa;• row segmentation / full-array parallelism&#xa;• column input registers + adder tree&#xa;• bidirectional output / on-chip reuse" vertex="1">
+          <mxGeometry height="190" width="420" x="650" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="outbuf" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15" value="Output Buffer&#xa;• 接收 MM 結果&#xa;• 可寫回 DRAM&#xa;• 或回送 Input Buffer 重用" vertex="1">
+          <mxGeometry height="120" width="240" x="1160" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="simd" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=15" value="Universal SIMD Unit&#xa;• arithmetic / root / exp / accumulation&#xa;• normalization / mean / variance&#xa;• ReLU / Softmax / Tanh / GeLU" vertex="1">
+          <mxGeometry height="150" width="240" x="1160" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="reuse" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14" value="Data Reuse Path&#xa;Output Buffer → Input Buffer&#xa;支援 on-chip data reuse" vertex="1">
+          <mxGeometry height="70" width="340" x="690" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="notes" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=15;fontStyle=1" value="HyCTor 核心概念&#xa;1. 單一 PE Array 同時支援 CNN / Linear / Attention&#xa;2. OS / WS dataflow 可切換&#xa;3. 稀疏性與 SIMD 輔助運算整合" vertex="1">
+          <mxGeometry height="120" width="420" x="650" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1" value="多核心擴充：QuadLoop-Mesh MCN" vertex="1">
+          <mxGeometry height="30" width="360" x="80" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14" value="Single-Core HyCTor Node" vertex="1">
+          <mxGeometry height="70" width="160" x="170" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14" value="Single-Core HyCTor Node" vertex="1">
+          <mxGeometry height="70" width="160" x="420" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14" value="Single-Core HyCTor Node" vertex="1">
+          <mxGeometry height="70" width="160" x="170" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14" value="Single-Core HyCTor Node" vertex="1">
+          <mxGeometry height="70" width="160" x="420" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="mcn" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=15" value="MCN / QuadLoop-Mesh&#xa;• 最小化 inter-core data transmission distance&#xa;• 支援 hybrid CNN / Transformer 資料依賴&#xa;• 搭配 workload distribution 提升 activation reuse" vertex="1">
+          <mxGeometry height="150" width="360" x="700" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="result" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;fontStyle=1" value="論文主張&#xa;• Flexible OS / WS dataflow&#xa;• Static MM：利用 slicing / splicing 提升利用率&#xa;• Dynamic MM：切換 OS / WS 降低 data movement&#xa;• Multicore：QuadLoop-mesh 提升吞吐量" vertex="1">
+          <mxGeometry height="170" width="380" x="1160" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="dram" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2" target="inbuf">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="dram" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2" target="sparsity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="inbuf" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2" target="pearay">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="sparsity" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2" target="pearay">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="pearay" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2" target="outbuf">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="outbuf" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2" target="simd">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="simd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;dashed=1" target="sparsity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="outbuf" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2" target="dram" value="write back">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1490" y="240" />
+              <mxPoint x="1490" y="120" />
+              <mxPoint x="170" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="outbuf" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;dashed=1" target="inbuf" value="reuse">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1280" y="540" />
+              <mxPoint x="440" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m1" edge="1" parent="1" source="cluster" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeColor=#4a86e8;strokeWidth=3" target="cluster2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m2" edge="1" parent="1" source="cluster" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeColor=#4a86e8;strokeWidth=3" target="cluster3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m3" edge="1" parent="1" source="cluster2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeColor=#4a86e8;strokeWidth=3" target="cluster4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m4" edge="1" parent="1" source="cluster3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeColor=#4a86e8;strokeWidth=3" target="cluster4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m5" edge="1" parent="1" source="cluster" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeColor=#4a86e8;strokeWidth=3;dashed=1" target="cluster4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m6" edge="1" parent="1" source="cluster2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeColor=#4a86e8;strokeWidth=3;dashed=1" target="cluster3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m7" edge="1" parent="1" source="cluster2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2" target="mcn">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m8" edge="1" parent="1" source="cluster4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2" target="mcn">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m9" edge="1" parent="1" source="mcn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2" target="result">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
