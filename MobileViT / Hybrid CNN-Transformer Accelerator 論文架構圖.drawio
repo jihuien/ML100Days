@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.6.4">
+  <diagram name="第 1 页" id="0SyhAh7Jq_Zm6tIzFzTV">
+    <mxGraphModel dx="2824" dy="1474" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=22;" value="MobileViT / Hybrid CNN-Transformer Accelerator&#xa;論文架構圖" vertex="1">
+          <mxGeometry height="70" width="560" x="520" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=18;" value="第一章 緒論&#xa;• 研究背景&#xa;• 研究動機與問題描述&#xa;• 問題定義&#xa;• 研究目標與解決方向&#xa;• 論文架構" vertex="1">
+          <mxGeometry height="180" width="260" x="60" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=18;" value="第二章 文獻回顧&#xa;• CNN Accelerator&#xa;• Transformer / ViT Accelerator&#xa;• Hybrid CNN-Transformer Accelerator&#xa;• MobileViT 與相關模型" vertex="1">
+          <mxGeometry height="180" width="260" x="360" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=18;" value="第三章 問題分析與模型特性&#xa;• MobileViT 網路結構分析&#xa;• Layer type / tensor shape / MACs&#xa;• Feature↔Token 轉換分析&#xa;• Dataflow 與 memory bottleneck 定義" vertex="1">
+          <mxGeometry height="180" width="280" x="660" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=18;" value="第四章 所提硬體架構&#xa;• Unified Tensor Layout&#xa;• Streaming Dataflow&#xa;• Memory Hierarchy / Buffer Design&#xa;• Scheduling / Mapping Strategy" vertex="1">
+          <mxGeometry height="180" width="280" x="980" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=18;" value="第五章 實驗與評估&#xa;• Baseline vs Proposed&#xa;• Latency / Throughput&#xa;• External Memory Traffic&#xa;• PE Utilization / Energy / Area" vertex="1">
+          <mxGeometry height="180" width="240" x="1300" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=18;" value="第六章 結論與未來工作&#xa;• 研究貢獻總結&#xa;• 限制與討論&#xa;• 未來延伸方向" vertex="1">
+          <mxGeometry height="140" width="360" x="620" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="c1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" target="c2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="c2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" target="c3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="c3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" target="c4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="c4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" target="c5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="c5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;" target="c6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#ffffff;strokeColor=#999999;fontSize=16;" value="主線：&#xa;Hybrid Model → 硬體挑戰 → MobileViT 問題分析 → 所提架構 → 實驗驗證 → 結論" vertex="1">
+          <mxGeometry height="100" width="500" x="80" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="focus" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;fontStyle=1;" value="核心研究問題：&#xa;Feature-map / Token-sequence representation switching&#xa;→ Tensor layout mismatch&#xa;→ Inter-layer dataflow discontinuity&#xa;→ Memory movement overhead" vertex="1">
+          <mxGeometry height="130" width="540" x="660" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="metrics" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;" value="建議評估指標：&#xa;Latency / Throughput / External Memory Access / PE Utilization / Energy / Area" vertex="1">
+          <mxGeometry height="100" width="300" x="1240" y="620" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
