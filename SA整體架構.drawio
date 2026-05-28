@@ -52,7 +52,7 @@
         <mxCell id="C5uv6ifoiG0SLIn9MVDx-29" edge="1" parent="1" source="C5uv6ifoiG0SLIn9MVDx-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;fontFamily=Times New Roman;" target="C5uv6ifoiG0SLIn9MVDx-38">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="C5uv6ifoiG0SLIn9MVDx-30" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" value="input buffer" vertex="1">
+        <mxCell id="C5uv6ifoiG0SLIn9MVDx-30" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" value="Input Buffer" vertex="1">
           <mxGeometry height="250" width="50" x="300" y="285" as="geometry" />
         </mxCell>
         <mxCell id="C5uv6ifoiG0SLIn9MVDx-31" edge="1" parent="1" source="C5uv6ifoiG0SLIn9MVDx-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;" target="C5uv6ifoiG0SLIn9MVDx-38">
